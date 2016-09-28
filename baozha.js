@@ -54,10 +54,20 @@
 		var x = event.clientX;
 		baba.currentTime = baba.duration*(x-578)/700;
 	}
-	jindutiao.addEventListener('mousedown',ladong);
-	function ladong(event){
-		var x = event.clientX;
-		jindutiao.style.width = x-578+"px"; 
+	var lty =document.getElementById('lingtouyang');
+	diceng.addEventListener('mouseover',la);
+	function la(event){
+
+		jindutiao.addEventListener('mousedown',dong);
+		function dong(event){
+
+			lty.addEventListener('mousedown',bansui);
+				function bansui(event){
+					var x = event.clientX;
+
+				}
+			jindutiao.style.width=x-578+"px";
+		}
 	}
 
 
@@ -87,6 +97,7 @@
 	function jingyin(){
 	if (baba.muted==false) {
 		baba.muted=true;
+		
 	}else{
 		baba.muted=false;
 	}
