@@ -38,44 +38,71 @@
 	}
 	guanggao.addEventListener('click',jixu);
 	var jindutiao = document.getElementById('jindutiao');
+	var syc = document.getElementById('shengyincao');
+	var sy = document.getElementById('shengyin');
+	var st = document.getElementById('shengtou');
 	/*伴随时间变换函数在这*/
 	baba.addEventListener('timeupdate',time);
 	function time(){
 		document.getElementById('xianzai').innerHTML = zhuanhuan(baba.currentTime);
 		document.getElementById("zongshi").innerHTML = zhuanhuan(baba.duration);
 		var bili = baba.currentTime/baba.duration;
-		var bili1 = bili*700;
+		var bili1 = bili*750;
 		jindutiao.style.width = bili1+"px";	
+		sy.style.width = baba.volume*750+"px";
+		if (baba.muted==true) {
+			sy.style.width = 0+"px";
+		}
 	}
-	/*滚动条*/
+	/*声音条点击*/
+	syc.addEventListener('click',syjd);
+	function syjd(event){
+		var x = event.clientX;
+		baba.volume = (x-318)/750;
+	}
+	/*滚动条点击*/
 	var diceng = document.getElementById('diceng');
+	var lty =document.getElementById('lingtouyang');
 	diceng.addEventListener('click',dingwei);
 		function dingwei(event){
 		var x = event.clientX;
-		baba.currentTime = baba.duration*(x-578)/700;
+		baba.currentTime = baba.duration*(x-318)/750;
 	}
-	var lty =document.getElementById('lingtouyang');
-	diceng.addEventListener('mouseover',la);
-	function la(event){
-
-		jindutiao.addEventListener('mousedown',dong);
-		function dong(event){
-
-			lty.addEventListener('mousedown',bansui);
-				function bansui(event){
-					var x = event.clientX;
-
-				}
-			jindutiao.style.width=x-578+"px";
+	/*声音条拖动*/
+	syc.onmousedown = anxia;
+	function anxia(){
+		syc.onmousemove = tuodong;
+		function tuodong(event){
+			var x = event.clientX;
+			baba.volume = (x-308)/750;
+			sy.style.width = baba.volume*750+"px";
+			syc.onmouseup = taiqi;
+			function taiqi(event){
+				var x = event.clientX;
+				syc.onmousemove = null;
+			}
 		}
 	}
-
-
-
+	/*滚动条拖动*/
+	diceng.onmousedown = anxia1;
+	function anxia1(){
+		diceng.onmousemove = tuodong1;
+		function tuodong1(event){
+			var x = event.clientX;
+			baba.currentTime = baba.duration*(x-308)/750;
+			var bili = baba.currentTime/baba.duration;
+			var bili1 = bili*750;
+			jindutiao.style.width = bili1+"px";
+			diceng.onmouseup = taiqi1;
+			function taiqi1(event){
+				var x = event.clientX;
+				diceng.onmousemove = null;
+			}
+		}
+	}
 	/*速率变化*/
 	document.getElementById('xia3').onclick=man;
 	document.getElementById('xia4').onclick=kuai;
-	
 	function man(){
 		baba.playbackRate-=0.2;
 	}
@@ -91,24 +118,49 @@
 	function tui(){
 		baba.currentTime-=5;
 	}
-	/*声音在这*/
+	/*静音在这*/
 	var xiabtn2 = document.getElementById("xiabtn2");
 	xiabtn2.onclick=jingyin;
 	function jingyin(){
 	if (baba.muted==false) {
 		baba.muted=true;
-		
 	}else{
 		baba.muted=false;
 	}
-	/*声音条*/
+	
+	
+
+
+
+
+
+
+
+
 
 
 
 }
 
-
-
-
-
 }(window))
+	/*全屏*/
+	function quanping() {
+	if(baba.requestFullscreen) {
+		baba.requestFullscreen();
+	} else if(baba.webkitRequestFullscreen) {
+		baba.webkitRequestFullscreen();
+	} else if(baba.mozRequestFullscreen) {
+		baba.mozRequestFullscreen();
+	} else if(baba.msRequestFullscreen) {
+		baba.mskitRequestFullscreen();
+	}
+}
+
+
+/*add_class.onclick = function() {
+    var file = input.files[0]
+    var url = URL.createObjectURL(file); 
+    console.log(url);
+    video.src = url;
+  }*/
+

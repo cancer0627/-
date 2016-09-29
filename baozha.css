@@ -1,5 +1,12 @@
-.sxdiv{
-	border: 1px red solid;
+#shang{
+	margin-left: 200px;
+}#zhong{
+	margin-left: 200px;
+}#xia{
+	margin-left: 200px;
+}
+div{
+	border: red 1px solid;
 }
 video{
 	width: 980px;
@@ -12,25 +19,28 @@ video{
 .btn{
 	width: 30px;
 	height: 30px;
-	border: 1px red solid;
+	color: #46f1e5;
 	background-color: transparent;
 	background-image: url(btn.png);
 	background-repeat: no-repeat;
 	position: relative;
-
+	border: none;
+}
+.btn:hover{
+	color:#f5ee18 ;
 }
 #xiabtn1{
 	background-position-x: -4px;
-    background-position-y: -76px;
-    left: 27px;
+    background-position-y: -74px;
+    
 }
 #xiabtn1:hover{
-	background-position-y: -111px;
+	background-position-y: -109px;
 }
 #xiabtn11{
 	background-position-x: -4px;
     background-position-y: -4px;
-    left: -11px;
+    left: -38px;
     visibility: hidden;
 }
 #xiabtn11:hover{
@@ -39,40 +49,59 @@ video{
 #xiabtn2{
 	background-position-x: -2px;
     background-position-y: -507px;
-    top:34px;
-    left:718px;
+        top: 100px;
+    left: 68px;
 }
 #xiabtn2:hover{
 	background-position-y: -543px;
 }
 #xia3{
 	position: relative;
-    left: -25px;
-    background-position-y: -149px;
+        left: -118px;
+    background-position-y: -144px;
 }
 #xia3:hover{
-	background-position-y: -185px;
+	background-position-y: -180px;
 }
 #xia4{
 	position: relative;
-    left: 668px;
-    background-position-y: -220px;
+    left: 642px;
+    background-position-y: -215px;
     background-position-x: -9px;
 }
 #xia4:hover{
-	background-position-y: -256px;
+	background-position-y: -251px;
 }
 #xia5{
 	position: relative;
-    left: -132px;
-    top: -14px;
+    left: -239px;
+    top: -8px;
     background-image: url();
+    width: 45px;
 }
 #xia6{
 	position: relative;
-    right: -621px;
-    top: -14px;
+    right: -584px;
+    top: -8px;
+    background-image: url();
+    width: 45px;
 }
 #lingtouyang:hover{
 	background-color: black;
+}
+#xia7{
+	top: -8px;
+    left: 578px;    width: 45px;
+    background-image: url();
+}
+#tuijian{
+	list-style:none;
+}
+#tuijian img{
+	width: 200px;
+	height: 124px;
+}
+#tuijian span{
+	width: 200px;
+	height: 124px;
 }
