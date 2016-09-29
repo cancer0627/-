@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 	<title>辣眼睛播放器</title>
@@ -6,17 +6,27 @@
 	<link rel="stylesheet" type="text/css" href="baozha.css">
 	
 </head>
-<body style="background:;">
+<body style="background-color:black; ">
 <!-- <div style="top: 0px;left: 0px;position: fixed;width: 1903px;height: 973px;
 opacity: 0.15;z-index: 1;background-color: rgb(0, 0, 0);display: none;" id="touming">
 	
 </div> -->
 <div style="width: 100%;height: 100%;">
 	<div id="you" style="width: 480px;height: 800px;float: right;margin-right:204px;">
-			<input type="file" name="" style="position:relative;top:70px;">
+			<input type="file" name="" style="margin-left: 60px;position:relative;top:70px;color:#46f1e5;" id="ipt">
+			<input type="button" value="播放" onclick="xuan()" style="position:relative;top:70px;">
 			<ul id="tuijian">
-				<li>
-					<img src="" >
+				<li onclick="shipin()">
+					<img src="lyb.jpg"><span>琅琊榜</span>
+				</li>
+				<li onclick="shipin1()">
+					<img src="Sintel.jpg"><span>Sintel</span>
+				</li>
+				<li onclick="shipin2()">
+					<img src="dxt.jpg"><span>大笨兔</span>
+				</li>
+				<li onclick="shipin3()">
+					<img src="dxzm.jpg"><span>大象之梦</span>
 				</li>
 			</ul>
 	</div>
@@ -31,7 +41,11 @@ opacity: 0.15;z-index: 1;background-color: rgb(0, 0, 0);display: none;" id="toum
 			<button id="xiabtn2" class="btn"></button>	
 	</div>
 	<div id="zhong" style="width: 1000px;height: 500px;background-color: black;">
-			<video poster="dzq.jpg" id="baba" src="lyb.mp4" autoplay="autoplay"> </video>
+			<video poster="lyb.jpg" id="baba" loop="true"> 
+			<source  src="lyb.mp4" type="">
+			<source  src="../../视频/电影/[电影天堂-www.dy2018.net].夺宝联盟.720p.BD中文字幕.rmvb" type="">
+			<source  src="../../视频/电影/[阳光电影www.ygdy8.com].火锅英雄.HD.720p.国语中字.mkv" type="">
+			</video>
 				<div style="width: 750px;height: 20px;background-color:#ddd;position:relative;left: 110px;top:7.5px;z-index:10;overflow:hidden;" id="diceng">
 						<div style="width:10px;height: 20px;background-color:#46f1e5;position:absolute;z-index:110;" id="jindutiao">
 									<div style="width:15px;height:30px;background-color:#f5ee18;z-index:111;position: relative;float: right;top: -6.5px;z-index: 111;"
@@ -43,12 +57,10 @@ opacity: 0.15;z-index: 1;background-color: rgb(0, 0, 0);display: none;" id="toum
 	<div id="xia" style="width: 1000px;height: 150px;z-index:1;">
 			<button id="xiabtn1" class="btn"></button>
 			<button id="xiabtn11" class="btn"></button>
-			<span style="width:120px;height:20px;margin:0px;padding:0px;position: relative;top: 27px;left: 295px;color: #46f1e5;" id="shijian">
-				<i id="xianzai"></i>/
-				<i id="zongshi"></i>
-			</span>
-			
-				
+				<span style="width:120px;height:20px;margin:0px;padding:0px;position: relative;top: 27px;left: 295px;color: #46f1e5;font-size: 20px;" id="shijian">
+					<e id="xianzai"></e>/
+					<e id="zongshi"></e>
+				</span>
 			<button class="btn" id="xia3"></button>
 			<button class="btn" id="xia4"></button>
 			<button class="btn" id="xia5">后退</button>
@@ -56,8 +68,8 @@ opacity: 0.15;z-index: 1;background-color: rgb(0, 0, 0);display: none;" id="toum
 			<button class="btn" id="xia7" onclick="quanping()">全屏</button>	
 	</div>
 </div>
-<div style="width: 150px;height: 150px;background-color: red;position: absolute;top: 400px;left: 890px;display: none;font-size:35px;" id="guanggao">
-		狂按100次才能解除暂停。
+<div style="width: 300px;height: 300px;background-color:#46f1e5;position: absolute;top: 400px;left: 890px;display: none;font-size:35px;" id="guanggao">
+		看广告有益于身体健康！！！！
 </div>
 
 </body>

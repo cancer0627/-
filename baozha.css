@@ -6,7 +6,7 @@
 	margin-left: 200px;
 }
 div{
-	border: red 1px solid;
+	
 }
 video{
 	width: 980px;
@@ -25,6 +25,7 @@ video{
 	background-repeat: no-repeat;
 	position: relative;
 	border: none;
+	
 }
 .btn:hover{
 	color:#f5ee18 ;
@@ -32,16 +33,18 @@ video{
 #xiabtn1{
 	background-position-x: -4px;
     background-position-y: -74px;
-    
+    position: relative;
+    visibility: hidden;
 }
 #xiabtn1:hover{
 	background-position-y: -109px;
 }
 #xiabtn11{
+	position: relative;
 	background-position-x: -4px;
     background-position-y: -4px;
     left: -38px;
-    visibility: hidden;
+    
 }
 #xiabtn11:hover{
 	background-position-y: -40px;
@@ -57,7 +60,7 @@ video{
 }
 #xia3{
 	position: relative;
-        left: -118px;
+    top: 61px;left: 400px;
     background-position-y: -144px;
 }
 #xia3:hover{
@@ -65,7 +68,7 @@ video{
 }
 #xia4{
 	position: relative;
-    left: 642px;
+    top: 61px;left: 400px;
     background-position-y: -215px;
     background-position-x: -9px;
 }
@@ -74,28 +77,44 @@ video{
 }
 #xia5{
 	position: relative;
-    left: -239px;
-    top: -8px;
+    top: 51px;
     background-image: url();
     width: 45px;
+    left: 400px;
+
 }
 #xia6{
 	position: relative;
-    right: -584px;
-    top: -8px;
+    top: 51px;
     background-image: url();
-    width: 45px;
+    width: 45px;left: 400px;
 }
 #lingtouyang:hover{
 	background-color: black;
 }
 #xia7{
-	top: -8px;
-    left: 578px;    width: 45px;
-    background-image: url();
+	position: relative;
+	width: 90px;
+	font-size: 35px;
+    float: right;
+     background-image: url();
 }
 #tuijian{
 	list-style:none;
+	position: relative;
+	top: 108px;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 60px;
+}
+#tuijian li{
+	margin-top:10px;
+	color:#46f1e5;
+}
+#tuijian li span{
+	position: relative;
+	top: -50px;
+	left: 20px;
 }
 #tuijian img{
 	width: 200px;

@@ -1,4 +1,8 @@
 (function(){
+	var ipt =document.getElementById('ipt'); 
+	
+	 
+	
 	function zhuanhuan(x) {
 	if (x>3600) {
 		var h = Math.floor(x/3600);
@@ -155,12 +159,29 @@
 		baba.mskitRequestFullscreen();
 	}
 }
+	function shipin() {
+		baba.src = "lyb.mp4";
+		baba.poster = "lyb.jpg";
+	}
+	function shipin1() {
+		baba.src = "http://media.w3.org/2010/05/sintel/trailer.mp4";
+		baba.poster = "Sintel.jpg";
+	}
+	function shipin2() {
+		baba.src = "lyb.mp4";
+		baba.poster = "dxt.jpg";
+	}
+	function shipin3() {
+		baba.src = "lyb.mp4";
+		baba.poster = "dxzm.jpg";
+	}
 
+	function xuan() {
+	    var file = ipt.files[0];
+	    console.log(file);
+	    var url = URL.createObjectURL(file); 
+	    console.log(url);
+	    baba.src = url;
+	  }
 
-/*add_class.onclick = function() {
-    var file = input.files[0]
-    var url = URL.createObjectURL(file); 
-    console.log(url);
-    video.src = url;
-  }*/
-
+	
