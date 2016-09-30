@@ -17,11 +17,11 @@ video{
 	padding: 0px;
 }
 .btn{
-	width: 30px;
-	height: 30px;
+	width: 90px;
+	height: 90px;
 	color: #46f1e5;
+	font-size: 38px;
 	background-color: transparent;
-	background-image: url(btn.png);
 	background-repeat: no-repeat;
 	position: relative;
 	border: none;
@@ -31,46 +31,56 @@ video{
 	color:#f5ee18 ;
 }
 #xiabtn1{
+	width: 40px;
 	background-position-x: -4px;
     background-position-y: -74px;
     position: relative;
     visibility: hidden;
+    left: 56px;
+     background-image: url();
 }
 #xiabtn1:hover{
 	background-position-y: -109px;
 }
 #xiabtn11{
+	width: 40px;
 	position: relative;
 	background-position-x: -4px;
     background-position-y: -4px;
-    left: -38px;
-    
+    left: 10px;
+     background-image: url();
 }
 #xiabtn11:hover{
 	background-position-y: -40px;
 }
 #xiabtn2{
+	width: 60px;
 	background-position-x: -2px;
     background-position-y: -507px;
-        top: 100px;
-    left: 68px;
+    top: 42px;
+    left: 52px;
+     background-image: url();
 }
 #xiabtn2:hover{
 	background-position-y: -543px;
 }
 #xia3{
+	width: 60px;
 	position: relative;
-    top: 61px;left: 400px;
+    top: 50px;left: 400px;
     background-position-y: -144px;
+    background-image: url();
 }
 #xia3:hover{
 	background-position-y: -180px;
 }
 #xia4{
+	width: 60px;
 	position: relative;
-    top: 61px;left: 400px;
+    top: 50px;left: 400px;
     background-position-y: -215px;
     background-position-x: -9px;
+    background-image: url();
 }
 #xia4:hover{
 	background-position-y: -251px;
@@ -98,6 +108,14 @@ video{
 	font-size: 35px;
     float: right;
      background-image: url();
+	color: #46f1e5;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	position: relative;
+	border: none;
+}
+#xia7:hover{
+	color: yellow;
 }
 #tuijian{
 	list-style:none;
@@ -111,6 +129,9 @@ video{
 	margin-top:10px;
 	color:#46f1e5;
 }
+#tuijian li:hover{
+	color: yellow;
+}
 #tuijian li span{
 	position: relative;
 	top: -50px;
@@ -123,4 +144,10 @@ video{
 #tuijian span{
 	width: 200px;
 	height: 124px;
+}
+#ipt:hover{
+	color: yellow;
+}
+#shijian:hover e{
+	color: yellow;
 }

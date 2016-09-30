@@ -1,8 +1,5 @@
 (function(){
 	var ipt =document.getElementById('ipt'); 
-	
-	 
-	
 	function zhuanhuan(x) {
 	if (x>3600) {
 		var h = Math.floor(x/3600);
@@ -29,15 +26,11 @@
 	var guanggao = document.getElementById('guanggao');
 	function zanting(){
 		baba.pause();
-		xiabtn1.style.visibility = "hidden";
-		xiabtn11.style.visibility = "visible";
 		guanggao.style.display = "block";
 	}
 	xiabtn11.onclick = jixu;
 	function jixu(){
 		baba.play();
-		xiabtn1.style.visibility = "visible";
-		xiabtn11.style.visibility = "hidden";
 		guanggao.style.display = "none";
 	}
 	guanggao.addEventListener('click',jixu);
@@ -56,6 +49,16 @@
 		sy.style.width = baba.volume*750+"px";
 		if (baba.muted==true) {
 			sy.style.width = 0+"px";
+		}
+		if (baba.played) {
+			xiabtn1.style.visibility = "visible";
+			xiabtn11.style.visibility = "hidden";
+			
+		}
+		if (baba.paused) {
+			xiabtn1.style.visibility = "hidden";
+			xiabtn11.style.visibility = "visible";	
+
 		}
 	}
 	/*声音条点击*/
@@ -116,6 +119,7 @@
 	/*前进后退*/
 	document.getElementById('xia5').onclick=tui;
 	document.getElementById('xia6').onclick=jin;
+
 	function jin(){
 		baba.currentTime+=5;
 	}
@@ -128,18 +132,13 @@
 	function jingyin(){
 	if (baba.muted==false) {
 		baba.muted=true;
+		xiabtn2.innerHTML = "声音";
 	}else{
 		baba.muted=false;
+		xiabtn2.innerHTML = "静音";
 	}
 	
 	
-
-
-
-
-
-
-
 
 
 
@@ -160,7 +159,7 @@
 	}
 }
 	function shipin() {
-		baba.src = "lyb.mp4";
+		baba.src = "../lyb.mp4";
 		baba.poster = "lyb.jpg";
 	}
 	function shipin1() {
@@ -168,12 +167,12 @@
 		baba.poster = "Sintel.jpg";
 	}
 	function shipin2() {
-		baba.src = "lyb.mp4";
+		baba.src = "http://data.vod.itc.cn/5mp4?file=/121/188/zwYOKRqaQTmLb1yN8ulMyF.mp4&key=gDP4ROrf9ebW3wZ1WjCcrMdN2om_r5z5&ca=1&prod=56&pt=pc&pg=1&start=-1";
 		baba.poster = "dxt.jpg";
 	}
 	function shipin3() {
-		baba.src = "lyb.mp4";
-		baba.poster = "dxzm.jpg";
+		baba.src = "http://gslb.miaopai.com/stream/kPzSuadRd2ipEo82jk9~sA__.mp4";
+		baba.poster = "";
 	}
 
 	function xuan() {
